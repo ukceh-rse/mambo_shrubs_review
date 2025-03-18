@@ -1,0 +1,64 @@
+---
+title: MAMBO Shrubs review and plan
+author:
+  name: Jo Walsh
+  affiliation:
+    name: UK Centre for Ecology & Hydrology
+    url: https://www.ceh.ac.uk
+  email: jowals@ceh.ac.uk
+  url: https://github.com/metazool
+  orcid: 0000-0003-0268-2263
+date: last-modified
+date-format: long
+abstract: Review and outline plan for MAMBO shrubs project 
+
+bibliography: references.bib
+
+format:
+  document-html: default
+  document-typst: default
+---
+
+## Introduction
+
+
+## An h2 heading
+
+Here we see the different levels of heading, from h2 down to h6.
+
+### An h3 heading
+
+#### An h4 heading
+
+##### An h5 heading
+
+###### An h6 heading
+
+
+## Different kinds of text
+
+This sentence contains some _italicised text_, some **bold text**, some `monospace text`, and finally some [linked text](https://github.com/ukceh-rse/quarto-templates).
+
+Now we have a code block
+
+```python
+import math
+
+radius = 1.0
+area = math.pi * radius**2
+```
+
+$$
+A = \pi r^2
+$$
+
+I recommend using footnotes to reference literature^[For example, [@Bender2021, page 3-5] ]
+
+
+## More information
+
+See https://quarto.org/docs/guide/
+
+
+<!-- Delete this slide if you have no references -->
+## References {.scrollable}

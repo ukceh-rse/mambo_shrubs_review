@@ -1,0 +1,25 @@
+title: ukceh-rse-document
+author: jmarshrossney
+version: 1.0.0
+quarto-required: ">=1.6.0"
+contributes:
+  formats:
+    
+    html:
+      code-copy: true
+      code-line-numbers: false
+      code-overflow: wrap
+      csl: https://www.zotero.org/styles/apa
+      embed-resources: true
+      link-external-newwindow: true
+      theme: 
+        light: default
+        dark: [default, dark.scss]
+      toc: true
+      toc-location: left
+
+    typst:
+      bibliographystyle: apa
+      template-partials:
+        - typst-template.typ
+        - typst-show.typ

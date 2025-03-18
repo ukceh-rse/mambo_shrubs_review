@@ -1,0 +1,16 @@
+/*-- scss:defaults --*/
+
+// Equivalent to $brand-charcoal and $brand-light-grey
+$body-bg: #333333;
+$body-color: #eaefec;
+
+// "inline code" means monospace here
+// https://quarto.org/docs/output-formats/html-themes.html#inline-code
+$code-color: #eaefec;
+// Not in the official palette!
+$code-bg: #2f4f4f;
+$code-block-bg: #2f4f4f;
+$code-block-bg-alpha: -.8;
+
+/*-- scss:rules --*/
+
