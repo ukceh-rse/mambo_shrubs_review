@@ -29,6 +29,18 @@ The first two are researcher prototypes, the last one is the analytical method t
 
 Can we reproduce all these, what data or weights are not included, and where's a suitable online service or catalogue for accessing them?
 
+## Data and data sharing
+
+This is going to be an early and ongoing issue
+
+* Reproducibility of prototypes (storage of models, example training data, demo inference data - this last could be derived from a STAC catalogue)
+* Hosting for workshops (needs ease of access from externally hosted notebook)
+
+DroneDB looks very promising for data management / catalogue access. Michael Tso et al did a WebODM prototype for the same group in 2022. 
+
+### Storage options 
+
+* [JASMIN s3](https://help.jasmin.ac.uk/docs/short-term-project-storage/managing-a-gws) - does setting this up involve direct NERC funding? 
 
 ## Background
 
