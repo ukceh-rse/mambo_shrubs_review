@@ -38,6 +38,21 @@ This is going to be an early and ongoing issue
 
 DroneDB looks very promising for data management / catalogue access. Michael Tso et al did a WebODM prototype for the same group in 2022. 
 
+### Data sources
+
+External data is listed in the Data Management Plan
+
+https://www.data.gov.uk/dataset/f0db0249-f17b-4036-9e65-309148c97ce4/national-lidar-programme - DEFRA LIDAR, 1m resolution in 5km tiles, OGL
+
+The DMP also says:
+
+* Provenance information will be stored when running the workflow, and we will build this into
+our workflow.
+* The script/workflow/model will be annotated or commented to be made understandable.
+* All of our data can become completely open immediately.
+* Our research data will be peer-reviewed through a data journal.
+
+
 ### Storage options 
 
 * [JASMIN s3](https://help.jasmin.ac.uk/docs/short-term-project-storage/managing-a-gws) - does setting this up involve direct NERC funding? 
