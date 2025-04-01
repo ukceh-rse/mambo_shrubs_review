@@ -4,13 +4,25 @@ _Trying to keep as much as possible in a review report/presentation, but notes i
 
 ## Aims
 
-The MAMBO project has more ambition than it does time. There are some research prototypes for shrub extraction and characterisation from different remote sensing data sources. There are analytical methods which are designed to accept output from these models. There's not much glue work, an overview of "could be" and a project need to be able to run a tutorial workshop for partners, on a platform with open registration, in Summer 2025. The PIs have expressed a preference for Colab for this.
+MAMBO WP4 has ambitious longer-term goals and relatively limited shorter-term time. What we have available are
+
+* Research prototypes for shrub extraction and characterisation from different remote sensing data sources. 
+* Analytical methods which are designed to accept output from these models and estimate biomass
+* An image and data collection which includes drone-borne top-down imagery and LIDAR point clouds
+
+The aims of this phase of development (engaging a Research Software Engineer for a couple of months) are
+
+* Make the data discoverable and reusable
+* "Glue work" on a reproducible workflow, reusing the existing model and/or a pretrained one developed elsewhere for shrub height estimation from a combination of imagery, terrains/surface models, and LIDAR
+* Provide an overview of "could be" with recommended off-the-shelf open source components for a more full and automated workflow, also describing infrastructure needs to support it
+
+We need to be able to run a tutorial workshop for partners, on a platform with open registration, in Summer 2025. The PIs have expressed a preference for Colab for this.
 
 ### Wishlist
 
-In rough order of priority (mine). In practise there are only two months of dedicated work hours, short term. A well-tested onboarding notebook tutorial is the non-negotiable part. Integration with the analysis package (providing it real output data) is the most "valuable" part and should be done as early as possible, even if we end up replacing some of the methods.
+In rough order of priority (_mine - JW_). In practise there are only two months of dedicated work hours, short term. A well-tested onboarding notebook tutorial is the non-negotiable part. Integration with the analysis package (providing it real output data) is the most "valuable" part and should be done as early as possible, even if we end up replacing some of the methods.
 
-The rest is more aspirational - it seems better (at project start) to have a recipe book for infrastructure choices which overlaps with other Digital Research Infrastructure project needs (and funding availability) than it does to have half built infrastructure (like evocative pipelines) - in a way, the longer we wait the more likely it is the needs of MAMBO will be met elsewhere.
+It seems better (at project start) to have a recipe book for infrastructure choices which overlaps with other Digital Research Infrastructure project needs (and funding availability) than it does to have half built infrastructure (like evocative pipelines) - in a way, the longer we wait the more likely it is the needs of MAMBO will be met elsewhere.
 
 * Reproduce the existing work and evaluate open source projects that could either augment or replace it
 * Consistent, data-versioned way of passing the outputs to the next phase in the project (outwith our control)
@@ -23,20 +35,22 @@ The rest is more aspirational - it seems better (at project start) to have a rec
 
 The first two are researcher prototypes, the last one is the analytical method that we should be feeding data into, and that the onboarding notebooks should cover.
 
-•	Shrub mask preprocessing: https://github.com/barbedorafael/shrub-prepro ; 
-•	Attention U-Net model pipeline: https://github.com/barbedorafael/att-unet-shrub-id ; 
-•	Allometry https://github.com/douglask3/BRAMBLE/blob/main/development_notebook.ipynb
+* Shrub mask preprocessing: https://github.com/barbedorafael/shrub-prepro ; 
+* Attention U-Net model pipeline: https://github.com/barbedorafael/att-unet-shrub-id ; 
+* Allometry https://github.com/douglask3/BRAMBLE/blob/main/development_notebook.ipynb
 
-Can we reproduce all these, what data or weights are not included, and where's a suitable online service or catalogue for accessing them?
+Can we reproduce all these, what data or weights are not included, and where's a suitable online service or catalogue for accessing them? 
+
+_Update: we have a data dump which includes imagery, point clouds, model training code, processing utilities and early reports to sort through - data and models to s3, extra reusable code to Github_
 
 ## Data and data sharing
 
-This is going to be an early and ongoing issue
+This is going to be an early and ongoing issue:
 
 * Reproducibility of prototypes (storage of models, example training data, demo inference data - this last could be derived from a STAC catalogue)
 * Hosting for workshops (needs ease of access from externally hosted notebook)
 
-DroneDB looks very promising for data management / catalogue access. Michael Tso et al did a WebODM prototype for the same group in 2022. 
+[DroneDB](https://github.com/DroneDB) looks very promising for data management / catalogue access. Michael Tso et al did a WebODM prototype for the same group in 2022. 
 
 ### Data sources
 
@@ -72,13 +86,11 @@ We have an existing GWS with object storage configured, to which I'm arranging a
 
 ## Background
 
-(https://www.sciencedirect.com/science/article/abs/pii/S1077314221000655)
+See [references.bib](references.bib) for a BibTex reference collection.
 
-Ruiliang Pu's review paper from 2021 on state of the art of remote sensing tree mapping
+[Ruiliang Pu's review paper from 2021 on state of the art of remote sensing tree mapping](https://www.sciencedirect.com/science/article/abs/pii/S1077314221000655)
 
-https://notebooklm.google.com/notebook/faca1d84-2082-4224-964b-f492ad4c9aa2?_gl=1*15qi2sg*_ga*NDI3NDU0MTIyLjE3NDIzMDEzMzU.*_ga_W0LDH41ZCB*MTc0MjMwMTMzNS4xLjAuMTc0MjMwMTMzNS42MC4wLjA.&original_referer=https:%2F%2Fnotebooklm.google%23&pli=1
-
-Very experimental NotebookLM instance with the paper above and a couple of different "awesome lists" for context
+[experimental NotebookLM instance](https://notebooklm.google.com/notebook/faca1d84-2082-4224-964b-f492ad4c9aa2?_gl=1*15qi2sg*_ga*NDI3NDU0MTIyLjE3NDIzMDEzMzU.*_ga_W0LDH41ZCB*MTc0MjMwMTMzNS4xLjAuMTc0MjMwMTMzNS42MC4wLjA.&original_referer=https:%2F%2Fnotebooklm.google%23&pli=1) with the paper above and a couple of different "awesome lists" for context - probably not an experiment I would repeat!
 
 ## Utils
 
