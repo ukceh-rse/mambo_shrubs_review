@@ -52,10 +52,23 @@ our workflow.
 * All of our data can become completely open immediately.
 * Our research data will be peer-reviewed through a data journal.
 
+### Data indexing and discovery
+
+Data available in object storage, with associated STAC catalogue. Depending how large the STAC index files are, they could be held in a git repo, or in another bucket and tracked via DVC.
+
+* [Walkthrough of creating STAC catalogue from programmatically readable metadata](https://stacspec.org/en/tutorials/2-create-stac-catalog-python/)
+
+There's also questions of format conversion and optimisation - e.g. to COG or COPC (Cloud Optimised Point Cloud). There's probably relevant work in FDRI (the focus is on timeseries but the background in optimisation of storage / chunk sizing etc will be similar).
+
+Depends on what we have in the data, the next step ideally would be to find existing utilities that we can point at a large geodata collection and generate a catalogue outline.
+
+This not only helps us meet the requirements of the DMP but offers a means of search and download from a notebook which could live anywhere, that's reasonably reproducible.
 
 ### Storage options 
 
 * [JASMIN s3](https://help.jasmin.ac.uk/docs/short-term-project-storage/managing-a-gws) - does setting this up involve direct NERC funding? 
+
+We have an existing GWS with object storage configured, to which I'm arranging access. It would simplify things (e.g. running a notebook-based workshop without having to give people credentials that may be stored insecurely) if we can make the data world-readable to anyone who knows the URL, can we envisage issues with this? (ecological site sensitivity, GDPR concerns, other?)
 
 ## Background
 
