@@ -43,6 +43,8 @@ Can we reproduce all these, what data or weights are not included, and where's a
 
 _Update: we have a data dump which includes imagery, point clouds, model training code, processing utilities and early reports to sort through - data and models to s3, extra reusable code to Github_
 
+There's another project, `shrub_height` which is not in a repository yet, only in the data collection. Reproducing this and publishing it is an early step we can take in parallel with data management struggles.
+
 ## Data and data sharing
 
 This is going to be an early and ongoing issue:
@@ -83,6 +85,8 @@ This not only helps us meet the requirements of the DMP but offers a means of se
 * [JASMIN s3](https://help.jasmin.ac.uk/docs/short-term-project-storage/managing-a-gws) - does setting this up involve direct NERC funding? 
 
 We have an existing GWS with object storage configured, to which I'm arranging access. It would simplify things (e.g. running a notebook-based workshop without having to give people credentials that may be stored insecurely) if we can make the data world-readable to anyone who knows the URL, can we envisage issues with this? (ecological site sensitivity, GDPR concerns, other?)
+
+See [s3.md](s3.md) for walkthrough notes on working with s3 storage.
 
 ## Background
 
