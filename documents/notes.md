@@ -35,8 +35,9 @@ It seems better (at project start) to have a recipe book for infrastructure choi
 
 The first two are researcher prototypes, the last one is the analytical method that we should be feeding data into, and that the onboarding notebooks should cover.
 
-* Shrub mask preprocessing: https://github.com/barbedorafael/shrub-prepro ; 
-* Attention U-Net model pipeline: https://github.com/barbedorafael/att-unet-shrub-id ; 
+* Shrub mask preprocessing (for deep learning models): https://github.com/barbedorafael/shrub-prepro 
+* Shrub height estimation (for shallow models): https://github.com/barbedorafael/shrub-height 
+* Attention U-Net model pipeline: https://github.com/barbedorafael/att-unet-shrub-id 
 * Allometry https://github.com/douglask3/BRAMBLE/blob/main/development_notebook.ipynb
 
 Can we reproduce all these, what data or weights are not included, and where's a suitable online service or catalogue for accessing them? 

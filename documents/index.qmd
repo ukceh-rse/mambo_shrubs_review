@@ -1,0 +1,107 @@
+---
+title: MAMBO Shrubs review and plan
+author:
+  name: Jo Walsh
+  affiliation:
+    name: UK Centre for Ecology & Hydrology
+    url: https://www.ceh.ac.uk
+  email: jowals@ceh.ac.uk
+  url: https://github.com/metazool
+  orcid: 0000-0003-0268-2263
+date: last-modified
+date-format: long
+abstract: Review and outline plan for MAMBO shrubs project 
+
+bibliography: references.bib
+
+format:
+  document-html: default
+  document-typst: default
+---
+
+## Introduction
+
+## Short-term Priorities
+
+- Data Discovery & Accessibility
+  - STAC catalogue implementation
+  - S3 storage configuration
+- Reproducible Workflow Development
+  - DVC pipeline setup
+  - CML integration
+- Tutorial Workshop Materials
+  - Colab notebook development
+  - Data access examples
+
+## Existing Work
+
+- Research Prototypes
+  - shrub-height (shallow ML approaches to height estimation)
+  - shrub-prepro (reusable data preprocessing for deep learning)
+  - att-unet-shrub-id (proof of concept fine tuning an Attention Unet)
+  - BRAMBLE analytics (allometry methods given output of the above)
+- Available Data Collections
+  - Drone imagery
+  - LIDAR point clouds
+
+## Gaps
+
+- Reusable shared storage
+- Understanding how volume is estimated and how diameter is calculated
+- Investigate leaning on others' work (e.g. Forest Research LiDAR methods)
+
+## Infrastructure Needs (idealised view)
+
+- Storage & Cataloging
+  - STAC API deployment
+  - Access control setup
+  - Format optimization (COG/COPC)
+- Processing Pipeline
+  - Label Studio deployment
+  - Training environment
+  - Model registry
+
+## Data Management
+
+  - Provenance tracking
+  - Documentation requirements
+  - Catalogue-ready data
+
+## Data Pipeline Components:
+
+1. Label Studio for image annotation
+2. DVC pipelines for reproducibility
+3. CML for automated reports:
+   - Training metrics
+   - Model performance visualizations
+   - Dataset statistics
+
+## Storage & Versioning
+
+- S3-compatible object storage for:
+  - Raw imagery
+  - Point cloud data
+  - Processed/labeled data
+  - Model weights
+- DVC for data versioning:
+- STAC catalog integration for spatial data discovery
+
+## Training Pipeline
+
+```mermaid
+graph LR
+    A[Raw Data] --> B[Preprocessing]
+    B --> C[Label Studio]
+    C --> D[Training Data]
+    D --> E[Model Training]
+    E --> F[Model Registry]
+    E --> G[CML Reports]
+```
+
+## Scratchpad
+
+I recommend using footnotes to reference literature^[For example, [@Bender2021, page 3-5] ]
+
+
+<!-- Delete this slide if you have no references -->
+## References {.scrollable}
